@@ -21,13 +21,13 @@ class m180710_095854_create_review_table extends Migration
 	        'product_id' => $this->integer(),
         ]);
 
-	    // creates index for column `article_id`
+	    // creates index for column `product_id`
 	    $this->createIndex(
 		    'idx_product_id',
 		    'review',
 		    'product_id'
 	    );
-	    // add foreign key for table `article`
+	    // add foreign key for table `product`
 	    $this->addForeignKey(
 		    'fk_product_id',
 		    'review',

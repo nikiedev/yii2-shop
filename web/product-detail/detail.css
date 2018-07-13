@@ -1,0 +1,407 @@
+/*! CSS Used from: http://maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css */
+a {
+    background: 0 0;
+}
+
+a:active, a:hover {
+    outline: 0;
+}
+
+img {
+    border: 0;
+}
+
+button, input, textarea {
+    margin: 0;
+    font: inherit;
+    color: inherit;
+}
+
+button {
+    overflow: visible;
+}
+
+button {
+    text-transform: none;
+}
+
+button, input[type=submit] {
+    -webkit-appearance: button;
+    cursor: pointer;
+}
+
+button::-moz-focus-inner, input::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+}
+
+input {
+    line-height: normal;
+}
+
+textarea {
+    overflow: auto;
+}
+
+@media print {
+    * {
+        color: #000 !important;
+        text-shadow: none !important;
+        background: transparent !important;
+        -webkit-box-shadow: none !important;
+        box-shadow: none !important;
+    }
+
+    a, a:visited {
+        text-decoration: underline;
+    }
+
+    a[href]:after {
+        content: " (" attr(href) ")";
+    }
+
+    a[href^="#"]:after {
+        content: "";
+    }
+
+    img {
+        page-break-inside: avoid;
+    }
+
+    img {
+        max-width: 100% !important;
+    }
+
+    p, h2 {
+        orphans: 3;
+        widows: 3;
+    }
+
+    h2 {
+        page-break-after: avoid;
+    }
+}
+
+* {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+:before, :after {
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+input, button, textarea {
+    font-family: inherit;
+    font-size: inherit;
+    line-height: inherit;
+}
+
+a {
+    color: #428bca;
+    text-decoration: none;
+}
+
+a:hover, a:focus {
+    color: #2a6496;
+    text-decoration: underline;
+}
+
+a:focus {
+    outline: thin dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+    outline-offset: -2px;
+}
+
+img {
+    vertical-align: middle;
+}
+
+h2 {
+    font-family: inherit;
+    font-weight: 500;
+    line-height: 1.1;
+    color: inherit;
+}
+
+h2 {
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+h2 {
+    font-size: 30px;
+}
+
+p {
+    margin: 0 0 10px;
+}
+
+ul {
+    margin-top: 0;
+    margin-bottom: 10px;
+}
+
+.row {
+    margin-right: -15px;
+    margin-left: -15px;
+}
+
+.col-sm-6 {
+    position: relative;
+    min-height: 1px;
+    padding-right: 15px;
+    padding-left: 15px;
+}
+
+@media (min-width: 768px) {
+    .col-sm-6 {
+        float: left;
+    }
+
+    .col-sm-6 {
+        width: 50%;
+    }
+}
+
+label {
+    display: inline-block;
+    max-width: 100%;
+    margin-bottom: 5px;
+    font-weight: 700;
+}
+
+.fade {
+    opacity: 0;
+    -webkit-transition: opacity .15s linear;
+    -o-transition: opacity .15s linear;
+    transition: opacity .15s linear;
+}
+
+.fade.in {
+    opacity: 1;
+}
+
+.tab-content > .tab-pane {
+    display: none;
+}
+
+.tab-content > .active {
+    display: block;
+}
+
+.row:before, .row:after {
+    display: table;
+    content: " ";
+}
+
+.row:after {
+    clear: both;
+}
+
+/*! CSS Used from: http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/css/font-awesome.min.css */
+.fa {
+    display: inline-block;
+    font: normal normal normal 14px/1 FontAwesome;
+    font-size: inherit;
+    text-rendering: auto;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    transform: translate(0, 0);
+}
+
+.fa-star:before {
+    content: "\f005";
+}
+
+/*! CSS Used from: file:///F:/Documents/html-templates/eElectronics/css/style.css */
+a:focus {
+    outline: 0px solid;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+h2 {
+    font-weight: 700;
+    margin: 0 0 15px;
+}
+
+a {
+    color: #1abc9c;
+}
+
+a:hover, a:focus {
+    color: #17a78b;
+}
+
+input[type="text"], input[type="email"], textarea {
+    border: 1px solid #ddd;
+    padding: 10px;
+}
+
+input[type="submit"], button[type=submit] {
+    background: none repeat scroll 0 0 #1abc9c;
+    border: medium none;
+    color: #fff;
+    padding: 11px 20px;
+    text-transform: uppercase;
+}
+
+input[type="submit"]:hover, button[type=submit]:hover {
+    background-color: #222;
+}
+
+.product-main-img {
+    margin-bottom: 20px;
+}
+
+.product-gallery {
+    margin-bottom: 25px;
+    margin-left: -15px;
+    overflow: hidden;
+}
+
+.product-gallery img {
+    height: auto;
+    margin-left: 15px;
+    width: 76px;
+}
+
+.product-name {
+    font-size: 25px;
+    margin-bottom: 20px;
+}
+
+.product-inner-price {
+    margin-bottom: 25px;
+}
+
+.product-inner-price > ins {
+    color: #1abc9c;
+    font-weight: 700;
+    margin-right: 10px;
+    text-decoration: none;
+}
+
+.quantity {
+    float: left;
+    margin-right: 15px;
+}
+
+.quantity input[type="number"] {
+    border: 1px solid #1abc9c;
+    padding: 5px;
+    width: 50px;
+}
+
+.add_to_cart_button {
+    background: none repeat scroll 0 0 #1abc9c;
+    border: medium none;
+    color: #fff;
+    padding: 6px 25px;
+    display: inline-block;
+}
+
+.add_to_cart_button:hover {
+    background-color: #222;
+    color: #fff;
+    text-decoration: none;
+}
+
+form.cart {
+    margin-bottom: 25px;
+}
+
+.product-inner-category {
+    margin-bottom: 30px;
+}
+
+.product-tab {
+    border-bottom: 1px solid #ddd;
+    list-style: outside none none;
+    margin: 0 0 30px;
+    padding: 0;
+    text-align: center;
+}
+
+.product-tab li {
+    display: inline-block;
+}
+
+.product-tab li.active {
+    background: none repeat scroll 0 0 #1abc9c;
+}
+
+.product-tab li.active a {
+    color: #fff;
+}
+
+.product-tab li a {
+    color: #222;
+    display: block;
+    font-size: 16px;
+    padding: 10px 30px;
+}
+
+.product-tab li a:hover {
+    text-decoration: none;
+}
+
+.product-tab li a:focus {
+    text-decoration: none;
+}
+
+.tab-content h2 {
+    font-size: 20px;
+}
+
+.tab-content {
+    margin-bottom: 30px;
+}
+
+.submit-review label {
+    display: block;
+}
+
+.submit-review input[type="text"], .submit-review input[type="email"], .submit-review textarea {
+    margin-bottom: 20px;
+    width: 100%;
+}
+
+.rating-chooser {
+    margin-bottom: 30px;
+}
+
+.rating-chooser p {
+    font-weight: 700;
+}
+
+.rating-wrap-post {
+    font-size: 20px;
+}
+
+.submit-review textarea {
+    height: 105px;
+}
+
+/*! CSS Used from: file:///F:/Documents/html-templates/eElectronics/css/responsive.css */
+@media only screen and (min-width: 992px) and (max-width: 1280px) {
+    input[type="submit"], button[type="submit"] {
+        padding: 11px 15px;
+    }
+}
+
+/*! CSS Used fontfaces */
+@font-face {
+    font-family: 'FontAwesome';
+    src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot?v=4.3.0');
+    src: url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.eot#iefix&v=4.3.0') format('embedded-opentype'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff2?v=4.3.0') format('woff2'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.woff?v=4.3.0') format('woff'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.ttf?v=4.3.0') format('truetype'), url('http://maxcdn.bootstrapcdn.com/font-awesome/4.3.0/fonts/fontawesome-webfont.svg?v=4.3.0#fontawesomeregular') format('svg');
+    font-weight: normal;
+    font-style: normal;
+}
