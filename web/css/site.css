@@ -273,7 +273,7 @@ a.desc:after {
     color: #fff;
     -webkit-transition: background .3s ease;
     transition: background .3s ease; }
-.add-to-cart:hover, .like:hover, #add-review:hover, .comment-edit a:hover {
+.add-to-cart:hover, .like:hover, #add-review:hover, .comment-edit a:hover, .btn-default:hover {
     background: #5fb0ef;
     color: #fff; }
 .product-reviews form {
@@ -417,7 +417,7 @@ a.desc:after {
     height: 0;
     width: 0;
 }
-#add-review {
+#add-review, .btn-default {
     padding: 8px 16px 8px 16px;
     display: inline-block;
     background-color: #87bae1;

@@ -11,6 +11,7 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
+Yii::$app->name = 'Simple Yii2 Shop';
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>
@@ -58,7 +59,7 @@ AppAsset::register($this);
 
 <footer class="footer">
 	<div class="container">
-		<p class="pull-left">&copy; My Company <?= date('Y') ?></p>
+		<p class="pull-left">&copy; nikiedev <?= date('Y') ?></p>
 
 		<p class="pull-right"><?= Yii::powered() ?></p>
 	</div>
