@@ -144,4 +144,11 @@ class ReviewController extends Controller
 
         throw new NotFoundHttpException('The requested page does not exist.');
     }
+
+	public function actionStat()
+	{
+		$language = Yii::$app->language; //текущий язык
+		//выводим вид соответствующий текущему языку
+		return $this->render('view-'.$language);
+	}
 }

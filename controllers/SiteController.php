@@ -126,4 +126,11 @@ class SiteController extends Controller
     {
         return $this->render('about');
     }
+
+	public function actionTranslations()
+	{
+		$language = Yii::$app->language; //текущий язык
+		//выводим вид соответствующий текущему языку
+		return $this->render('translations/page-'.$language);
+	}
 }

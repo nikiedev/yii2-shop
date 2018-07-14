@@ -4,7 +4,7 @@
         "Read more about it at https://getcomposer.org/doc/01-basic-usage.md#installing-dependencies",
         "This file is @generated automatically"
     ],
-    "content-hash": "2c9a4c5f3fe77f9dbb8767cf748822c5",
+    "content-hash": "1d7f79a4e1d71612ed03ad80b896aa70",
     "packages": [
         {
             "name": "bower-asset/bootstrap",
@@ -780,6 +780,52 @@
             "time": "2018-03-05T04:35:50+00:00"
         },
         {
+            "name": "klisl/yii2-languages",
+            "version": "2.4",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/klisl/yii2-languages.git",
+                "reference": "dcc3d80988ec84eb24609228c3a22b0fb8075709"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/klisl/yii2-languages/zipball/dcc3d80988ec84eb24609228c3a22b0fb8075709",
+                "reference": "dcc3d80988ec84eb24609228c3a22b0fb8075709",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "~2.0"
+            },
+            "type": "yii2-extension",
+            "extra": {
+                "bootstrap": "klisl\\languages\\Bootstrap"
+            },
+            "autoload": {
+                "psr-4": {
+                    "klisl\\languages\\": "src"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "MIT"
+            ],
+            "authors": [
+                {
+                    "name": "Sergey Klimenchuk",
+                    "email": "ksl80@ukr.net",
+                    "homepage": "https://github.com/klisl/yii2-languages",
+                    "role": "Developer"
+                }
+            ],
+            "description": "Package",
+            "keywords": [
+                "languages",
+                "multilanguage",
+                "yii2"
+            ],
+            "time": "2018-04-03T13:14:06+00:00"
+        },
+        {
             "name": "swiftmailer/swiftmailer",
             "version": "v5.4.9",
             "source": {
@@ -832,61 +878,6 @@
                 "mailer"
             ],
             "time": "2018-01-23T07:37:21+00:00"
-        },
-        {
-            "name": "vova07/yii2-imperavi-widget",
-            "version": "2.0.5",
-            "source": {
-                "type": "git",
-                "url": "https://github.com/vova07/yii2-imperavi-widget.git",
-                "reference": "6ea9a41c3ec18889a4b38cd700fa81ae03154b4d"
-            },
-            "dist": {
-                "type": "zip",
-                "url": "https://api.github.com/repos/vova07/yii2-imperavi-widget/zipball/6ea9a41c3ec18889a4b38cd700fa81ae03154b4d",
-                "reference": "6ea9a41c3ec18889a4b38cd700fa81ae03154b4d",
-                "shasum": ""
-            },
-            "require": {
-                "yiisoft/yii2": "*"
-            },
-            "require-dev": {
-                "mikey179/vfsstream": "~1",
-                "phpunit/phpunit": "4.*",
-                "scrutinizer/ocular": "~1.1"
-            },
-            "type": "yii2-extension",
-            "autoload": {
-                "psr-4": {
-                    "vova07\\imperavi\\": "src",
-                    "vova07\\imperavi\\tests\\": "tests"
-                }
-            },
-            "notification-url": "https://packagist.org/downloads/",
-            "license": [
-                "BSD-3-Clause"
-            ],
-            "authors": [
-                {
-                    "name": "Crudu Vasile",
-                    "email": "bazillio07@yandex.ru",
-                    "homepage": "https://github.com/vova07",
-                    "role": "Developer"
-                }
-            ],
-            "description": "The imperavi redactor widget for Yii 2 framework.",
-            "homepage": "https://github.com/vova07/yii2-imperavi-widget",
-            "keywords": [
-                "Redactor",
-                "extension",
-                "imperavi",
-                "widget",
-                "wysiwyg",
-                "yii",
-                "yii 2",
-                "yii2"
-            ],
-            "time": "2018-06-22T17:18:43+00:00"
         },
         {
             "name": "yii2mod/yii2-editable",
@@ -3755,6 +3746,61 @@
             ],
             "description": "A small library for converting tokenized PHP source code into XML and potentially other formats",
             "time": "2017-04-07T12:08:54+00:00"
+        },
+        {
+            "name": "vova07/yii2-imperavi-widget",
+            "version": "2.0.5",
+            "source": {
+                "type": "git",
+                "url": "https://github.com/vova07/yii2-imperavi-widget.git",
+                "reference": "6ea9a41c3ec18889a4b38cd700fa81ae03154b4d"
+            },
+            "dist": {
+                "type": "zip",
+                "url": "https://api.github.com/repos/vova07/yii2-imperavi-widget/zipball/6ea9a41c3ec18889a4b38cd700fa81ae03154b4d",
+                "reference": "6ea9a41c3ec18889a4b38cd700fa81ae03154b4d",
+                "shasum": ""
+            },
+            "require": {
+                "yiisoft/yii2": "*"
+            },
+            "require-dev": {
+                "mikey179/vfsstream": "~1",
+                "phpunit/phpunit": "4.*",
+                "scrutinizer/ocular": "~1.1"
+            },
+            "type": "yii2-extension",
+            "autoload": {
+                "psr-4": {
+                    "vova07\\imperavi\\": "src",
+                    "vova07\\imperavi\\tests\\": "tests"
+                }
+            },
+            "notification-url": "https://packagist.org/downloads/",
+            "license": [
+                "BSD-3-Clause"
+            ],
+            "authors": [
+                {
+                    "name": "Crudu Vasile",
+                    "email": "bazillio07@yandex.ru",
+                    "homepage": "https://github.com/vova07",
+                    "role": "Developer"
+                }
+            ],
+            "description": "The imperavi redactor widget for Yii 2 framework.",
+            "homepage": "https://github.com/vova07/yii2-imperavi-widget",
+            "keywords": [
+                "Redactor",
+                "extension",
+                "imperavi",
+                "widget",
+                "wysiwyg",
+                "yii",
+                "yii 2",
+                "yii2"
+            ],
+            "time": "2018-06-22T17:18:43+00:00"
         },
         {
             "name": "webmozart/assert",

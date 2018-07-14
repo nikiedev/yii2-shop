@@ -11,10 +11,26 @@ $config = [
         '@bower' => '@vendor/bower-asset',
         '@npm'   => '@vendor/npm-asset',
     ],
+    'sourceLanguage' => 'ru',
+
+    'modules' => [
+	    'languages' => [
+		    'class' => 'klisl\languages\Module',
+		    //Языки используемые в приложении
+		    'languages' => [
+			    'English' => 'en',
+			    'Русский' => 'ru',
+		    ],
+		    'default_language' => 'ru', //основной язык (по-умолчанию)
+		    'show_default' => false, //true - показывать в URL основной язык, false - нет
+	    ],
+    ],
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation
             'cookieValidationKey' => 'af-klToN_GxFVsmI9zUYAWygYyv2sJkC',
+            'baseUrl' => '', //убрать frontend/web
+            'class' => 'klisl\languages\Request'
         ],
         'cache' => [
             'class' => 'yii\caching\FileCache',
@@ -47,7 +63,14 @@ $config = [
         'urlManager' => [
             'enablePrettyUrl' => true,
             'showScriptName' => false,
+            'enableStrictParsing' => true,
+            'class' => 'klisl\languages\UrlManager',
             'rules' => [
+	            'languages' => 'languages/default/index', //для модуля мультиязычности
+	            //далее создаем обычные правила
+	            '/' => 'site/index',
+	            '<action:(contact|login|logout|language|about|signup)>' => 'site/<action>',
+	            '<action:(product|category|review)>' => '<action>',
             ],
         ],
 

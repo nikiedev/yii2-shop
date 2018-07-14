@@ -39,15 +39,15 @@ Yii::$app->name = 'Simple Yii2 Shop';
 	echo Nav::widget([
 		'options' => ['class' => 'navbar-nav navbar-right'],
 		'items' => [
-			['label' => 'Home', 'url' => ['/']],
-			['label' => 'Products', 'url' => ['/product']],
-			['label' => 'Categories', 'url' => ['/category']],
-			['label' => 'Reviews', 'url' => ['/review']],
+			['label' => Yii::t('app', 'Главная'), 'url' => ['/']],
+			['label' => Yii::t('app', 'Магазин'), 'url' => ['/product']],
+			['label' => Yii::t('app', 'Категории'), 'url' => ['/category']],
+			['label' => Yii::t('app', 'Отзывы'), 'url' => ['/review']],
 		],
 	]);
+	echo klisl\languages\widgets\ListWidget::widget();
 	NavBar::end();
 	?>
-
 	<div class="container">
 		<?= Breadcrumbs::widget([
 			'links' => isset($this->params['breadcrumbs']) ? $this->params['breadcrumbs'] : [],

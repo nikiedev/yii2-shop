@@ -21,8 +21,7 @@
         "kartik-v/yii2-editable": "*",
         "kartik-v/yii2-date-range": "*",
         "kartik-v/yii2-field-range": "*",
-        "yii2mod/yii2-editable": "*",
-        "kartik-v/yii2-detail-view": "*"
+        "klisl/yii2-languages": "^2.4"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "~2.0.0",
