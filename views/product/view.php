@@ -10,7 +10,7 @@ use yii\helpers\Url;
 /* @var $model app\models\Product */
 
 $this->title = $model->title;
-$this->params['breadcrumbs'][] = ['label' => 'Products', 'url' => ['/product']];
+$this->params['breadcrumbs'][] = ['label' => Yii::t('app', 'Товары'), 'url' => ['/']];
 $this->params['breadcrumbs'][] = $this->title;
 ?>
 <div class="product-view">
@@ -18,10 +18,10 @@ $this->params['breadcrumbs'][] = $this->title;
     <h1><?= Html::encode($this->title) ?></h1>
 
     <p>
-        <?= Html::a('Update', ['update', 'id' => $model->id], ['class' => 'btn btn-primary']) ?>
-        <?= Html::a('Set Photo', ['set-photo', 'id' => $model->id], ['class' => 'btn btn-default']) ?>
-        <?= Html::a('Delete', ['delete', 'id' => $model->id], [
-            'class' => 'btn btn-danger',
+        <?= Html::a(Yii::t('app', 'Редактировать'), ['update', 'id' => $model->id], ['class' => 'btn btn-default']) ?>
+        <?= Html::a(Yii::t('app', 'Изменить фото'), ['set-photo', 'id' => $model->id], ['class' => 'btn btn-default']) ?>
+        <?= Html::a(Yii::t('app', 'Удалить'), ['delete', 'id' => $model->id], [
+            'class' => 'btn btn-default',
             'data' => [
                 'confirm' => 'Are you sure you want to delete this item?',
                 'method' => 'post',
@@ -47,7 +47,7 @@ $this->params['breadcrumbs'][] = $this->title;
         <div class="col-sm-6">
             <div class="product-images">
                 <div class="product-main-img">
-                    <img class="img-responsive" src="<?= Yii::getAlias('@web') . '/uploads/' . $model->photo; ?>" alt="<?= $model->title ?>">
+                    <img class="img-responsive" src="<?= '/uploads/' . $model->photo; ?>" alt="<?= $model->title ?>">
                 </div>
             </div>
         </div>
@@ -66,6 +66,7 @@ $this->params['breadcrumbs'][] = $this->title;
             <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
             <h4 class="price">Цена: <span><?= $model->price; ?></span></h4>
             <p class="vote"><strong>91%</strong> покупателям понравился данный продукт! <strong>(87 голосов)</strong></p>
+            <p>Категория: <b><?= $product->category->title ?></b></p>
             <div class="action">
                 <button class="add-to-cart btn btn-default" type="button">В корзину</button>
                 <button class="like btn btn-default" type="button"><span class="fa fa-heart"></span></button>

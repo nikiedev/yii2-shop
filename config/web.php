@@ -68,12 +68,33 @@ $config = [
             'rules' => [
 	            'languages' => 'languages/default/index', //для модуля мультиязычности
 	            //далее создаем обычные правила
-	            '/' => 'site/index',
-	            '<action:(contact|login|logout|language|about|signup)>' => 'site/<action>',
+	            '/' => 'product/index',
+	            '<action:(login|logout|language|about|signup)>' => 'site/<action>',
 	            '<action:(product|category|review)>' => '<action>',
+	            'product/<id:\d+>' => 'product/view',
+	            'product/update/<id:\d+>' => 'product/update',
+	            'product/update/set-photo/<id:\d+>' => 'product/set-photo',
+	            'product/update/set-category/<id:\d+>' => 'product/set-category',
+	            'product/delete/<id:\d+>' => 'product/delete',
+	            'review/index' => 'review/index',
+	            'review/view/<id:\d+>' => 'review/view',
+	            'review/update/<id:\d+>' => 'review/update',
+	            'review/create' => 'review/create',
+	            'review/delete/<id:\d+>' => 'review/delete',
+	            'category' => 'category/index',
+	            'category/view/<id:\d+>' => 'category/view',
+	            'category/create' => 'category/create',
+	            'category/update/<id:\d+>' => 'category/update',
+	            'category/delete/<id:\d+>' => 'category/delete',
             ],
         ],
-
+//        'assetManager' => [
+//	        'bundles' => [
+//		        'yii\web\JqueryAsset' => [
+//			        'js'=>[]
+//		        ],
+//		    ]
+//        ]
     ],
     'params' => $params,
 ];

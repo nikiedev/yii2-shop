@@ -1,41 +1,58 @@
-
-
-.product-list-basic{
+.intro-link {
+    color: #87bae1;
+    font-weight: bold;
+}
+.intro-link:hover {
+    color: #5fb0ef;
+    text-decoration: none;
+}
+.title-category {
+    padding-right: 0;
+    padding-left: 0;
+}
+.panel-block {
+    padding: 8px;
+}
+.product-list-basic, .category-list{
     list-style:none;
     margin: 0 auto;
-    max-width: 1200px;
-    width: 100%;
-    text-align: center;
     padding: 0;
 }
-
-.product-list-basic li{
+.product-list-basic {
+    text-align: center;
+}
+.product-list-basic .panel-block {
+    padding: 15px;
+}
+.category-list .panel-block {
+    padding: 15px;
+}
+.product-list-basic .panel-block, .category-list .panel-block{
     box-sizing:border-box;
-    display: inline-block;
     vertical-align: top;
     text-align:left;
     font:normal 12px sans-serif;
-
     background-color:#ffffff;
     border:1px solid #dbe3e7;
     border-radius: 3px;
     box-shadow: 1px 3px 1px rgba(0, 0, 0, 0.08);
-
-    margin: 0 12px 14px 0;
-    padding: 25px;
 }
-
+.product-list-basic li, .category-list li {
+    padding-bottom: 15px;
+}
 /* The product image */
 
 .product-list-basic .product-photo{
     display: block;
     text-align: center;
     box-shadow : 0 0 20px 8px #f3f3f3 inset;
-
-    width: 275px;
+    width: auto;
     margin-bottom: 25px;
-    padding: 20px 0;
     box-sizing: border-box;
+}
+.product-list-basic .product-photo img {
+    padding: 5px;
+    margin: 5px 0;
 }
 
 .product-list-basic .product-photo:hover {
@@ -50,7 +67,6 @@
     white-space: nowrap;
     overflow: hidden;
     text-overflow:ellipsis;
-    max-width: 200px;
     margin:0;
 }
 
@@ -102,13 +118,10 @@
 
 .product-list-basic .product-description{
     margin-top: 20px;
-
     color: #5d5d5d;
     font-size: 14px;
     line-height: 1.45;
     white-space: normal;
-
-    max-width: 260px;
     margin-bottom: 20px;
 }
 
@@ -151,16 +164,15 @@
     margin: 0;
 }
 
-/* Making the list responsive */
-
-@media (max-width: 800px){
-
-    .product-list-basic .product-photo{
-        width: 225px;
-    }
-
-    .product-list-basic .product-description{
-        max-width: 225px;
+@media screen and (min-width: 768px) {
+    .product-list-basic li, .category-list li {
+        padding-right: 0;
     }
 }
 
+@media screen and (max-width: 767px) {
+    .product-list-basic li, .category-list li {
+        padding-right: 0;
+        padding-left: 0;
+    }
+}

@@ -15,18 +15,9 @@ use vova07\imperavi\Widget;
 
     <?= $form->field($model, 'title')->textInput(['maxlength' => true]) ?>
 
-    <?= $form->field($model, 'description')->widget(Widget::className(), [
-	    'settings' => [
-		    'lang' => 'ru',
-		    'minHeight' => 200,
-		    'plugins' => [
-			    'clips',
-			    'fullscreen',
-		    ],
-	    ],
-    ]); ?>
+	<?= $form->field($model, 'description')->textarea(['rows' => 6]) ?>
 
-    <?= $form->field($model, 'photo')->textInput(['maxlength' => true]) ?>
+<!--    --><?//= $form->field($model, 'photo')->textInput(['maxlength' => true]) ?>
 
     <?= $form->field($model, 'price')->textInput(['maxlength' => true]) ?>
 

@@ -2,11 +2,13 @@
 
 namespace app\controllers;
 
+use app\models\Category;
 use app\models\PhotoUpload;
 use app\models\Review;
 use Yii;
 use app\models\Product;
 use app\models\ProductSearch;
+use yii\helpers\ArrayHelper;
 use yii\web\Controller;
 use yii\web\NotFoundHttpException;
 use yii\filters\VerbFilter;
@@ -47,11 +49,13 @@ class ProductController extends Controller
 //            'dataProvider' => $dataProvider,
 //        ]);
 	    $productModel = new Product();
+		$categories = Category::find()->asArray()->all();
 
 	    $products = $productModel->find()->asArray()->all();
 
 	    return $this->render('index', [
             'products' => $products,
+		    'categories' => $categories,
         ]);
     }
 
@@ -71,12 +75,20 @@ class ProductController extends Controller
 	        'product_id' => $id,
         ]);*/
 
+	    //$productModel = new Product();
+
+	    //$product = $productModel->getProduct($id);
+	    //$lang_data = $product->getDataProducts();
+
+	    $product = Product::findOne($id);
+
         return $this->render('view', [
 	        'model' => $this->findModel($id),
         	'reviewModel' => $reviewModel,
 	        'reviews' => $reviews,
 	        'product_id' => $id,
-
+			'product' => $product,
+			//'lang_data' => $lang_data,
         ]);
 
     }
@@ -136,6 +148,31 @@ class ProductController extends Controller
 		}
 
 		return $this->render('photo', ['model' => $model]);
+	}
+
+	public function actionSetCategory($id)
+	{
+		$products = Product::find()->all();
+
+		/*
+		// not ready yet
+
+		$product = $this->findModel($id);
+		$selectedCategory = $product->category_id;
+		$categories = ArrayHelper::map(Category::find()->all(), 'id', 'title');
+
+		if (Yii::$app->request->isPost)
+		{
+			$category = Yii::$app->request->post('category');
+			if ($product->saveCategory($category))
+			{
+				return $this->redirect(['view', 'id' => $product->id]);
+			}
+		}
+		*/
+		return $this->render('category', [
+			'products' => $products,
+		]);
 	}
 
     /**

@@ -12,6 +12,7 @@ use Yii;
  * @property string $description
  * @property string $photo
  * @property string $price
+ * @property string $lang
  * @property int $category_id
  *
  * @property Review[] $reviews
@@ -38,7 +39,7 @@ class Product extends \yii\db\ActiveRecord
 	        [['price'], 'default', 'value' => 0.00],
             [['category_id'], 'integer'],
 	        [['category_id'], 'default', 'value' => 1],
-            [['title', 'photo'], 'string', 'max' => 255],
+            [['title', 'photo', 'lang'], 'string', 'max' => 255],
         ];
     }
 
@@ -47,14 +48,15 @@ class Product extends \yii\db\ActiveRecord
      */
     public function attributeLabels()
     {
-        return [
-            'id' => 'ID',
-            'title' => 'Title',
-            'description' => 'Description',
-            'photo' => 'Photo',
-            'price' => 'Price',
-            'category_id' => 'Category ID',
-        ];
+	    return [
+		    'id' => Yii::t('app', 'ID'),
+		    'title' => Yii::t('app', 'Title'),
+		    'description' => Yii::t('app', 'Description'),
+		    'photo' => Yii::t('app', 'Photo'),
+		    'price' => Yii::t('app', 'Price'),
+		    'lang' => Yii::t('app', 'Lang'),
+		    'category_id' => Yii::t('app', 'Category ID'),
+	    ];
     }
 
     /**
@@ -107,4 +109,21 @@ class Product extends \yii\db\ActiveRecord
 			return true;
 		}
 	}
+
+	public function getProducts(){
+		return $this->find()->all();
+	}
+	public function getLangProducts()
+	{
+		return $this->find();
+	}
+	public function getDataProducts(){
+		$language = Yii::$app->language;
+		$data_lang = $this->getLangProducts()->where(['lang'=>$language])->one();
+		return $data_lang;
+	}
+
+//	public function getProduct($url){
+//		return $this->find()->where(['url' => $url])->one();
+//	}
 }
