@@ -45,7 +45,7 @@ class ProductController extends Controller
 		$categories = Category::find()->asArray()->all();
 
 	    $products = $productModel->find()->asArray()->where(['lang' => Yii::$app->language])->all();
-
+var_dump($products);die;
 	    return $this->render('index', [
             'products' => $products,
 		    'categories' => $categories,
