@@ -80,7 +80,7 @@ class Product extends \yii\db\ActiveRecord
 
 	public function getPhoto()
 	{
-		return ($this->photo) ? '/img/' . $this->photo : '/no-photo.png';
+		return ($this->photo) ? '/uploads/' . $this->photo : '/no-photo.png';
 	}
 
 	public function deletePhoto()
