@@ -41,17 +41,10 @@ class ProductController extends Controller
      */
     public function actionIndex()
     {
-//        $searchModel = new ProductSearch();
-//        $dataProvider = $searchModel->search(Yii::$app->request->queryParams);
-//
-//        return $this->render('index', [
-//            'searchModel' => $searchModel,
-//            'dataProvider' => $dataProvider,
-//        ]);
 	    $productModel = new Product();
 		$categories = Category::find()->asArray()->all();
 
-	    $products = $productModel->find()->asArray()->all();
+	    $products = $productModel->find()->asArray()->where(['lang' => Yii::$app->language])->all();
 
 	    return $this->render('index', [
             'products' => $products,
@@ -69,16 +62,6 @@ class ProductController extends Controller
     {
 	    $reviewModel = new Review();
 	    $reviews = $reviewModel->find()->where(['product_id' => $id])->asArray()->all();
-        /*return $this->render('view', [
-            'model' => $this->findModel($id),
-	        'reviews' => $reviews,
-	        'product_id' => $id,
-        ]);*/
-
-	    //$productModel = new Product();
-
-	    //$product = $productModel->getProduct($id);
-	    //$lang_data = $product->getDataProducts();
 
 	    $product = Product::findOne($id);
 
@@ -88,7 +71,6 @@ class ProductController extends Controller
 	        'reviews' => $reviews,
 	        'product_id' => $id,
 			'product' => $product,
-			//'lang_data' => $lang_data,
         ]);
 
     }

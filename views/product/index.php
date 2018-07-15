@@ -23,6 +23,7 @@ $this->title = 'Products';
     </ul>
     <ul class="product-list-basic col-xs-12 col-sm-9">
 	    <?php foreach ($products as $product): ?>
+        <?php //$lang_data = $product->getDataProducts();  ?>
         <li class="col-sm-4">
         <div class="panel-block">
             <a href="<?= Url::toRoute(['product/view', 'id' => $product['id']]) ?>" class="product-photo">
