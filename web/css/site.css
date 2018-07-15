@@ -155,6 +155,7 @@ a.desc:after {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
+    min-width: 125px;
 }
 
 .tab-slider--trigger.active {
