@@ -40,7 +40,7 @@ Yii::$app->name = Yii::t('app','Простой каталог товаров');
 		'options' => ['class' => 'navbar-nav navbar-right'],
 		'items' => [
 			['label' => Yii::t('app', 'Главная'), 'url' => ['/']],
-			['label' => Yii::t('app', 'Товары'), 'url' => ['/product']],
+//			['label' => Yii::t('app', 'Товары'), 'url' => ['/product']],
 			['label' => Yii::t('app', 'Категории'), 'url' => ['/category']],
 			['label' => Yii::t('app', 'Отзывы'), 'url' => ['/review']],
 		],
