@@ -29,25 +29,11 @@ $this->params['breadcrumbs'][] = $this->title;
         ]) ?>
     </p>
 
-
-
-    <?php /* DetailView::widget([
-        'model' => $model,
-        'attributes' => [
-            'id',
-            'title',
-            'description:ntext',
-            'photo',
-            'price',
-            'category_id',
-        ],
-    ])*/ ?>
-
     <div class="row">
         <div class="col-sm-6">
             <div class="product-images">
                 <div class="product-main-img">
-                    <img class="img-responsive" src="<?= '/uploads/' . $model->photo; ?>" alt="<?= $model->title ?>">
+                    <img class="img-responsive" src="<?= (!empty($product['photo'])) ? '/uploads/' . $model->photo : '/img/no-photo.png'; ?>" alt="<?= $model->title ?>">
                 </div>
             </div>
         </div>
@@ -63,7 +49,7 @@ $this->params['breadcrumbs'][] = $this->title;
                 </div>
                 <span class="review-no">41 <?= Yii::t('app', 'отзывов'); ?></span>
             </div>
-            <p class="product-description">Suspendisse quos? Tempus cras iure temporibus? Eu laudantium cubilia sem sem! Repudiandae et! Massa senectus enim minim sociosqu delectus posuere.</p>
+            <p class="product-description">Тут может быть еще информация...</p>
             <h4 class="price"><?= Yii::t('app', 'Цена'); ?>: <span><?= $model->price; ?></span></h4>
             <p class="vote"><strong>91%</strong> покупателям понравился данный продукт! <strong>(87 голосов)</strong></p>
             <p><?= Yii::t('app', 'Категория'); ?>: <b><?= $product->category->title ?></b></p>
