@@ -42,10 +42,10 @@ class ProductController extends Controller
     public function actionIndex()
     {
 	    $productModel = new Product();
-		$categories = Category::find()->asArray()->all();
+		$categories = Category::find()->asArray()->where(['lang' => Yii::$app->language])->all();
 
 	    $products = $productModel->find()->asArray()->where(['lang' => Yii::$app->language])->all();
-var_dump($products);die;
+
 	    return $this->render('index', [
             'products' => $products,
 		    'categories' => $categories,

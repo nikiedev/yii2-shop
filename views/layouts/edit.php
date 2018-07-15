@@ -11,7 +11,7 @@ use yii\widgets\Breadcrumbs;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
-Yii::$app->name = 'Simple Yii2 Shop';
+Yii::$app->name = Yii::t('app','Простой каталог товаров');
 ?>
 <?php $this->beginPage() ?>
 <!DOCTYPE html>

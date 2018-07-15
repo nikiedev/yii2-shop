@@ -5,7 +5,7 @@ use yii\grid\GridView;
 use yii\widgets\LinkPager;
 use yii\helpers\Url;
 
-$this->title = 'Products';
+$this->title = Yii::t('app', 'Товары');
 
 ?>
 
@@ -26,7 +26,7 @@ $this->title = 'Products';
         <li class="col-sm-4">
         <div class="panel-block">
             <a href="<?= Url::toRoute(['product/view', 'id' => $product['id']]); ?>" class="product-photo">
-                <img src="<?= '/uploads/' . $product['photo']; ?>" height="130" alt="iPhone 6" />
+                <img src="<?= (!empty($product['photo'])) ? '/uploads/' . $product['photo'] : '/img/no-photo.png'; ?>" height="130" alt="iPhone 6" />
             </a>
             <h2><a href="<?= Url::toRoute(['product/view' , 'id' => $product['id']]) ?>"><?= $product['title']; ?></a></h2>
             <a href="<?= Url::toRoute(['product/update', 'id' => $product['id']]); ?>" class="product-edit"><?= Yii::t('app', 'Редактировать'); ?></a>

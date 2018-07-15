@@ -1,5 +1,6 @@
 <?php
 return [
+	'Простой каталог товаров' => 'Simple catalog of goods',
 	'Главная'       => 'Home',
 	'Товары'   => 'Products',
 	'Категории' => 'Categories',
